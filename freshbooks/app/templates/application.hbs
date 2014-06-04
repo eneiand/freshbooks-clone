@@ -1,22 +1,31 @@
-<h2 id='title'>Welcome to Freshbooks</h2>
-
-<ul class='nav-toplinks inline-list'>
-  <li>{{#link-to 'addons'}} Add-on Store {{/link-to}}</li>
-  <li>{{#link-to 'account'}} My Account {{/link-to}}</li>
-  <li>{{#link-to 'settings'}} Settings {{/link-to}}</li>
-  <li>{{#link-to 'help'}} Help {{/link-to}}</li>
-  <li>{{#link-to 'logout'}} Log out {{/link-to}}</li>
-</ul>
-
-
-<ul class='nav-mainlinks inline-list'>
-  <li>{{#link-to 'home'}} Home {{/link-to}}</li>
-  <li>{{#link-to 'people'}} People {{/link-to}}</li>
-  <li>{{#link-to 'invoices'}} Invoices {{/link-to}}</li>
-  <li>{{#link-to 'estimates'}} Estimates {{/link-to}}</li>
-  <li>{{#link-to 'expenses'}} Expenses {{/link-to}}</li>
-  <li>{{#link-to 'time'}} Time Tracking {{/link-to}}</li>
-  <li>{{#link-to 'reports'}} Reports {{/link-to}}</li>
-</ul>
-
-{{outlet}}
+<div class='row'>
+    <div class='small-12 columns small-centered '> 
+        <div class='row'>
+            <div class='panel left'>
+                <img src='https://neilcorp.freshbooks.com/logo/company.v1401586598'>
+            </div>
+            <ul class='small-6 columns nav-toplinks inline-list right'>
+                <li>{{#link-to 'addons'}} Add-on Store {{/link-to}}</li>
+                <li>{{#link-to 'account'}} My Account {{/link-to}}</li>
+                <li>{{#link-to 'settings'}} Settings {{/link-to}}</li>
+                <li>{{#link-to 'help'}} Help {{/link-to}}</li>
+                <li>{{#link-to 'logout'}} Log out {{/link-to}}</li>
+            </ul>
+        </div>
+        
+        <div class='row'>
+            <div class='small-12 columns'>
+            <ul class='nav-mainlinks inline-list'>
+                <li>{{#link-to 'home'}} Home {{/link-to}}</li>
+                <li>{{#link-to 'people'}} People {{/link-to}}</li>
+                <li>{{#link-to 'invoices'}} Invoices {{/link-to}}</li>
+                <li>{{#link-to 'estimates'}} Estimates {{/link-to}}</li>
+                <li>{{#link-to 'expenses'}} Expenses {{/link-to}}</li>
+                <li>{{#link-to 'time'}} Time Tracking {{/link-to}}</li>
+                <li>{{#link-to 'reports'}} Reports {{/link-to}}</li>
+            </ul>
+            </div>
+        </div>
+        {{outlet}} 
+    </div>
+</div>
