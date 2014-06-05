@@ -22,7 +22,7 @@ Router.map(function() {
   });
   
   this.resource('invoices', function(){
-    this.route('invoices');
+    this.route('new');
     this.route('recurring');
     this.route('received');
     this.route('payments');

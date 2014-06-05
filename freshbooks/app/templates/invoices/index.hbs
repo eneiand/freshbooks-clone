@@ -1,0 +1,49 @@
+    <div class='row clearfix'>
+    <div class='small-9 columns'>
+        <h3>Invoices</h3>
+    </div>
+        {{link-to '+ New Invoice' 'invoices.new' class='button success right'}}
+    </div>
+<div class='row'>    
+    <div class='small-12 columns panel callout'>
+        <div class="button-bar">
+  <ul class="button-group radius">
+    <li><a href="#" class="tiny button secondary">Archive</a></li>
+    <li><a href="#" class="tiny button secondary">Delete</a></li>
+  </ul>
+  <ul class="button-group radius">
+    <li><a href="#" class="tiny button secondary">Copy</a></li>
+    <li><a href="#" class="tiny button secondary">Print</a></li>
+    <li><a href="#" class="tiny button secondary">Send</a></li>
+  </ul>
+   <ul class="button-group radius">
+    <li><a href="#" class="tiny button secondary">Enter Payment</a></li>
+    <li><a href="#" class="tiny button secondary">Pay Online</a></li>
+  </ul>
+    <a href="#" class="tiny button secondary right">Enter Payment</a>
+</div>
+    <table>
+        <thead>
+            <tr>
+                 <th></th>
+                 <th>Invoice</th>
+                 <th>Client Name</th>
+                 <th>Description</th>
+                 <th>Date</th>
+                 <th>Total</th>
+                 <th>Status</th>
+                 <th></th>
+            </tr>    
+        </thead>    
+    </table>
+        
+    </div>
+    
+    <div class='small-12 columns'>
+    <div data-alert class='alert-box secondary radius'>
+       <h5>Invoice Status Legend</h5> 
+        <a href="#" class="close">&times;</a>
+    </div>
+    </div>
+</div>
+{{outlet}}
