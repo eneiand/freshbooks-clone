@@ -12,7 +12,7 @@ Router.map(function() {
   
   this.resource('people', function(){
     this.resource('clients', function(){
-      this.resource('client', {path : '/client/:client_id'});
+      this.route('new');
     });
     this.resource('staff', function(){
       this.route('new');
