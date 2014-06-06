@@ -38,8 +38,14 @@ Router.map(function() {
     });
   });
   
-  this.resource('estimates');
-  this.resource('expenses');
+  this.resource('estimates', function(){
+    this.route('new');
+    this.route('received');
+  });
+  this.resource('expenses', function(){
+    this.route('new');
+    this.route('import');
+  });
   this.resource('time');
   this.resource('reports');
   this.resource('addons');
