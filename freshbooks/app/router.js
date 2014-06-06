@@ -23,11 +23,19 @@ Router.map(function() {
   
   this.resource('invoices', function(){
     this.route('new');
-    this.route('recurring');
+    this.resource('recurring', function(){
+        this.route('new');
+    });
     this.route('received');
-    this.route('payments');
-    this.route('credits');
-    this.route('items');
+    this.resource('payments', function(){
+        this.route('new');
+    });
+    this.resource('credits', function(){
+        this.route('new');
+    });
+    this.resource('items', function(){
+        this.route('new');
+    });
   });
   
   this.resource('estimates');
