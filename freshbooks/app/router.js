@@ -46,10 +46,24 @@ Router.map(function() {
     this.route('new');
     this.route('import');
   });
-  this.resource('time');
-  this.resource('reports');
+  this.resource('time', function(){
+    this.route('start');  
+    this.resource('projects', function(){
+        this.route('new');
+    });
+    this.resource('tasks', function() {
+        this.route('new');
+    });
+  });
+  this.resource('reports', function(){
+    this.route('popular');
+    this.route('accounting');
+    this.route('client');
+    this.route('invoice');
+    this.route('time');
+  });
+    
   this.resource('addons');
-  
   this.resource('account', function(){
     this.resource('billing');
     this.resource('administrator');

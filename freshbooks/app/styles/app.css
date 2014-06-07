@@ -5721,3 +5721,15 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+/* Customizations */
+#footer p, h6{
+    color: gray;
+    font-size: 80%;
+    margin: 0;
+}
+
+#footer h6{
+    font-weight: bold;
+}
+
