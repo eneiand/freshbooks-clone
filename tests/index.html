@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{BASE_TAG}}
+    <base href="/" />
 
     <link rel="stylesheet" href="assets/freshbooks.css">
     <link rel="stylesheet" href="assets/qunit.css">
@@ -33,7 +33,7 @@
     <div id="qunit-fixture"></div>
 
     <script>
-      window.ENV = {{ENV}};
+      window.ENV = {"baseURL":"/","locationType":"auto","FEATURES":{},"APP":{"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_MODULE_RESOLVER":true,"LOG_VIEW_LOOKUPS":true},"LOG_MODULE_RESOLVER":true};
     </script>
     <script src="assets/qunit.js"></script>
     <script src="assets/freshbooks.js"></script>
