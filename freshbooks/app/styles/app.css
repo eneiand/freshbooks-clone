@@ -5729,6 +5729,7 @@ th.hide-for-touch {
     margin: 0;
 }
 
+
 #footer h6{
     font-weight: bold;
 }
@@ -5745,7 +5746,16 @@ div#nav-toplinks.button-bar{
 }
 
 #logo {
-    margin-top: 0;
+    padding-top: 0px;
+    margin-top: -20px;
     margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#new-item-btns li{
+    padding-right: 10px;
 }
 
