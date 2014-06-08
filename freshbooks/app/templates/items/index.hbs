@@ -1,6 +1,15 @@
-<div class='row clearfix'>
+<div class='row'>
+    <div {{bind-attr class=':small-6 :small-offset-3 :columns showHelp::hide' }}>
+        <div class='alert-box info radius'>
+            <h5>Items help you work faster and stay organized.</h5>
+            <p>Use items to speed up the generation of invoices, estimates and support tickets, to help categorize your revenues, improve reporting and track inventory. To get started {{link-to 'create a new item' 'items.new'}}.</p>
+            <a href="#" {{action clearShowHelp}} class="close">&times;</a>
+        </div>
+    </div>
+</div>
+<div class='row'>
     <div class='small-9 columns'>
         <h3>Items</h3>
     </div>
-        {{link-to '+ New Item' 'items.new' class='button success right'}}
-    </div>
+    {{link-to '+ New Item' 'items.new' class='button success right'}}
+</div>

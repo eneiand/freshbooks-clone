@@ -1,4 +1,5 @@
-export default Ember.ObjectController.extend({
+export
+default Ember.ObjectController.extend({
     name: '',
     description: '',
     cost: '',
@@ -6,8 +7,8 @@ export default Ember.ObjectController.extend({
     tax1: '',
     tax2: '',
     trackInventory: false,
-    
-    resetValues: function(){
+
+    resetValues: function () {
         this.set('name', '');
         this.set('description', '');
         this.set('cost', '');
@@ -16,43 +17,43 @@ export default Ember.ObjectController.extend({
         this.set('tax2', '');
         this.set('trackInventory', false);
     },
-    
+
     itemCreated: false,
     validationError: false,
-    saveItem: function(){
-        if(!this.get('name')){
+    saveItem: function () {
+        if (!this.get('name')) {
             this.set('validationError', true);
             return;
         }
-        
+
         this.store.createRecord('item', {
-                name: this.name,
-                description: this.description,
-                cost: this.cost,
-                quantity: this.quantity,
-                tax1: this.tax1,
-                tax2: this.tax2,
-                trackInventory: this.trackInventory
-            });
+            name: this.name,
+            description: this.description,
+            cost: this.cost,
+            quantity: this.quantity,
+            tax1: this.tax1,
+            tax2: this.tax2,
+            trackInventory: this.trackInventory
+        });
         this.set('validationError', false);
         this.set('itemCreated', true);
     },
     actions: {
-        save: function(){    
+        save: function () {
             this.saveItem();
             return false;
         },
-        saveAndAdd: function(){
+        saveAndAdd: function () {
             this.saveItem();
             this.resetValues();
             return false;
         },
-        clearItemCreated: function(){
-            this.set('itemCreated', false); 
+        clearItemCreated: function () {
+            this.set('itemCreated', false);
             return false;
         },
-        clearValidationError: function(){
-            this.set('validationError', false); 
+        clearValidationError: function () {
+            this.set('validationError', false);
             return false;
         }
     }
