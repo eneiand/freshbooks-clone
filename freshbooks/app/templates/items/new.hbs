@@ -1,8 +1,23 @@
 <div class='row'>
-    <div class='small-12 columns'>
+    <div class='small-3 columns'>
         <h3>New Item</h3>
-        <hr>
     </div>
+    <div {{bind-attr class=':small-6 :columns itemCreated::hide'}}>
+        <div data-alert class='alert-box success radius'>
+        Item created
+        <a href="#" {{action clearItemCreated}} class="close">&times;</a>
+    </div>
+    </div>
+    <div {{bind-attr class=':small-6 :columns validationError::hide'}}>
+        <div data-alert class='alert-box alert radius'>
+        Validation error
+        <a href="#" {{action clearValidationError}} class="close">&times;</a>
+    </div>
+    </div>
+
+    <hr/>
+</div> 
+    
 </div>
 <form>
     <div class='row'>
@@ -10,31 +25,31 @@
           <label for="right-label" class="right inline">Item Name</label>
         </div>
         <div class="small-4 columns left">
-          <input type="text" id="right-label"/>
+          {{input type='text' value=name}}
         </div>
     </div>
     <div class='row'>
         <div class="small-3 columns">
-          <label for="right-label" class="right">Description</label>
+          <label class="right">Description</label>
         </div>
         <div class="small-5 columns left">
-          <textarea id="right-label"></textarea>
+          {{textarea value=description}}
         </div>
     </div>
     <div class='row'>
         <div class="small-3 columns">
-          <label for="right-label" class="right inline">Unit Cost</label>
+          <label class="right inline">Unit Cost</label>
         </div>
         <div class="small-2 columns left">
-          <input type="text" id="right-label"/>
+          {{input type='text' value=cost}}
         </div>
     </div>
     <div class='row'>
         <div class="small-3 columns">
-          <label for="right-label" class="right inline">Quantity</label>
+          <label class="right inline">Quantity</label>
         </div>
         <div class="small-2 columns left">
-            {{input type='text' value=quantity id='right-label'}}
+            {{input type='text' value=quantity}}
         </div>
     </div>
     <div class='row'>
@@ -61,14 +76,14 @@
             <label for="right-label" class="right ">Track Inventory</label>
             </div>
             <div class="small-2 left columns">
-                 <input id="checkbox1" type="checkbox"/>
+                 {{input type='checkbox' checked=trackInventory}}
             </div>
     </div>
     <div id='new-item-btns' class='row'>
   <div class='small-8 columns small-offset-3'>
     <ul class="button-group">
-        <li><a href="#" class="button large success radius">Save</a></li>
-  <li><a href="#" class="button large success radius">Save and Add Another</a></li>
+        <li><a href="#" {{action 'save'}} class="button large success radius">Save</a></li>
+  <li><a href="#" {{action 'saveAndAdd'}} class="button large success radius">Save and Add Another</a></li>
 </ul>
   </div>
 </div>
