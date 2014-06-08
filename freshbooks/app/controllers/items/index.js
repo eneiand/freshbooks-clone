@@ -1,5 +1,5 @@
 export
-default Ember.ObjectController.extend({
+default Ember.ArrayController.extend({
     showHelp: true,
 
     actions: {

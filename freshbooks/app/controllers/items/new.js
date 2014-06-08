@@ -26,7 +26,7 @@ default Ember.ObjectController.extend({
             return;
         }
 
-        this.store.createRecord('item', {
+        var item = this.store.createRecord('item', {
             name: this.name,
             description: this.description,
             cost: this.cost,
@@ -35,6 +35,7 @@ default Ember.ObjectController.extend({
             tax2: this.tax2,
             trackInventory: this.trackInventory
         });
+        item.save();
         this.set('validationError', false);
         this.set('itemCreated', true);
     },

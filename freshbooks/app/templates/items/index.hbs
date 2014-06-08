@@ -13,3 +13,35 @@
     </div>
     {{link-to '+ New Item' 'items.new' class='button success right'}}
 </div>
+<div class='row'>
+    <div class='small-12 columns'>
+        <table>
+            <thead>
+                <tr>
+                    <th width="10"></th>
+                    <th width='150'>Item Name</th>
+                    <th width="200">Description</th>
+                    <th width="150">Inventory</th>
+                    <th width="150">Unit Cost(£)</th>
+                    <th width="150">Qty</th>
+                    <th width="150">Tax 1</th>
+                    <th width="150">Tax 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each}}
+                <tr>
+                    <td></td>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td></td>
+                    <td>{{cost}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{tax1}}</td>
+                    <td>{{tax2}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
