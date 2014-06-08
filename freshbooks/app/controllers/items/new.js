@@ -34,7 +34,8 @@ export default Ember.ObjectController.extend({
                 tax2: this.tax2,
                 trackInventory: this.trackInventory
             });
-            this.set('itemCreated', true);
+        this.set('validationError', false);
+        this.set('itemCreated', true);
     },
     actions: {
         save: function(){    
@@ -44,7 +45,6 @@ export default Ember.ObjectController.extend({
         saveAndAdd: function(){
             this.saveItem();
             this.resetValues();
-            console.log('saveAdd');
             return false;
         },
         clearItemCreated: function(){

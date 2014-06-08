@@ -1,14 +1,14 @@
 <div class='row'>
-    <div class='small-3 columns'>
+    <div class='small-2 columns'>
         <h3>New Item</h3>
     </div>
-    <div {{bind-attr class=':small-6 :columns itemCreated::hide'}}>
+    <div {{bind-attr class=':small-7 :columns itemCreated::hide'}}>
         <div data-alert class='alert-box success radius'>
         Item created
         <a href="#" {{action clearItemCreated}} class="close">&times;</a>
     </div>
     </div>
-    <div {{bind-attr class=':small-6 :columns validationError::hide'}}>
+    <div {{bind-attr class=':small-7 :columns validationError::hide'}}>
         <div data-alert class='alert-box alert radius'>
         Validation error
         <a href="#" {{action clearValidationError}} class="close">&times;</a>
@@ -80,7 +80,7 @@
             </div>
     </div>
     <div id='new-item-btns' class='row'>
-  <div class='small-8 columns small-offset-3'>
+  <div class='small-8 columns small-offset-2'>
     <ul class="button-group">
         <li><a href="#" {{action 'save'}} class="button large success radius">Save</a></li>
   <li><a href="#" {{action 'saveAndAdd'}} class="button large success radius">Save and Add Another</a></li>
