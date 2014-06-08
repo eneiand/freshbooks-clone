@@ -14,10 +14,10 @@ var Item = DS.Model.extend({
 
 Item.reopenClass({
     FIXTURES: [
-        {
+/*        {
             id: 1,
             name: 'first item'
-        }
+        }*/
     ]
 });
 
