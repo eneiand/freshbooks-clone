@@ -1,19 +1,21 @@
 <div class='row'>
-    <div class='small-12 columns'> 
-        <div class='row'>
-            <div data-tooltip  class='panel left has-tip' title='Upload your logo'>
-                <img src='https://neilcorp.freshbooks.com/logo/company.v1401586598'>
-            </div>
-            <div class='panel right small-6 columns'>
-            <ul class=' nav-toplinks inline-list'>
-                <li>{{#link-to 'addons'}} Add-on Store {{/link-to}}</li>
-                <li>{{#link-to 'account'}} My Account {{/link-to}}</li>
-                <li>{{#link-to 'settings'}} Settings {{/link-to}}</li>
-                <li>{{#link-to 'help'}} Help {{/link-to}}</li>
-                <li>{{#link-to 'logout'}} Log out {{/link-to}}</li>
+    <div id='nav-toplinks' class='small-7 small-offset-5 columns button-bar'>
+            <ul  class='button-group radius right'>
+                <li>{{#link-to 'addons' classNames='button tiny secondary'}} Add-on Store {{/link-to}}</li>
+                <li>{{#link-to 'account' classNames='button tiny secondary'}} My Account {{/link-to}}</li>
+                <li>{{#link-to 'settings' classNames='button tiny secondary'}} Settings {{/link-to}}</li>
+                <li>{{#link-to 'help' classNames='button tiny secondary'}} Help {{/link-to}}</li>
+                <li>{{#link-to 'logout' classNames='button tiny secondary'}} Log out {{/link-to}}</li>
             </ul>
-            </div>
-        </div>
+    </div>
+</div>
+
+<div class='row'> 
+    <div id='logo'>
+                <img src='https://neilcorp.freshbooks.com/logo/company.v1401586598'>
+    </div>
+</div>
+
         
         <div class='row'>
             <div class='panel small-12 columns'>
@@ -28,8 +30,6 @@
             </ul>
             </div>
         </div>
-    </div>
-</div>
 
 {{outlet}} 
 
