@@ -7,12 +7,26 @@ var Task = DS.Model.extend({
     })
 });
 
-Item.reopenClass({
+Task.reopenClass({
     FIXTURES: [
-/*        {
+        {
             id: 1,
-            name: 'first item'
-        }*/
+            name: 'General',
+            billToClient: true,
+            ratePerHour: 0
+        },
+        {
+            id: 2,
+            name: 'Meetings',
+            billToClient: true,
+            ratePerHour: 0
+        },
+        {
+            id: 3,
+            name: 'Research',
+            billToClient: true,
+            ratePerHour: 0
+        }
     ]
 });
 
