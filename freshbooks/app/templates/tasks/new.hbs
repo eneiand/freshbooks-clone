@@ -1,0 +1,66 @@
+<div class='row'>
+  <div class='small-2 columns'>
+    <h3>New Task</h3>
+  </div>
+  <div {{bind-attr class=':small-7 :columns itemCreated::hide' }}>
+    <div data-alert class='alert-box success radius'>
+      Task created
+      <a href="#" {{action clearItemCreated}} class="close">&times;</a>
+    </div>
+  </div>
+  <div {{bind-attr class=':small-7 :columns validationError::hide' }}>
+    <div data-alert class='alert-box alert radius'>
+      Validation error
+      <a href="#" {{action clearValidationError}} class="close">&times;</a>
+    </div>
+  </div>
+
+  <hr/>
+</div>
+
+</div>
+<form>
+  <div class='row'>
+    <div class="small-3 columns">
+      <label for="right-label" class="right inline">Task Name</label>
+    </div>
+    <div class="small-4 columns left">
+      {{input type='text' value=name}}
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="small-3 columns">
+      <label class="right">Description</label>
+    </div>
+    <div class="small-5 columns left">
+      {{textarea value=description}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label class="right ">Bill to Client</label>
+    </div>
+    <div class="small-5 left columns">
+      {{input type='checkbox' checked=billToClient}}
+    </div>
+  </div>
+  <div class='row'>
+    <div class="small-3 columns">
+      <label class="right inline">Rate per hour</label>
+    </div>
+    <div class="small-2 columns left">
+      {{input type='text' value=ratePerHour}}
+    </div>
+  </div>
+  <div id='new-item-btns' class='row'>
+    <div class='small-8 columns small-offset-2'>
+      <ul class="button-group">
+        <li><a href="#" {{action 'save'}} class="button large success radius">Save</a>
+        </li>
+        <li><a href="#" {{action 'saveAndAdd'}} class="button large success radius">Save and Add Another</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</form>

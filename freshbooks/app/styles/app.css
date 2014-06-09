@@ -5729,6 +5729,10 @@ th.hide-for-touch {
     margin: 0;
 }
 
+#invoice-btns p{
+  color: gray;
+  font-size: 80%;
+}
 
 #footer h6{
     font-weight: bold;
@@ -5763,3 +5767,6 @@ label {
     padding-left: 50px;
 }
 
+.alert-box .close{
+  top: 10%;
+}
