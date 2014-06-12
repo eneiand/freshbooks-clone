@@ -7762,6 +7762,15 @@ div#nav-toplinks.button-bar {
     margin-right: 0px;
     padding-right: 0px;
 }
+.small-text {
+    font-size: 80%;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+#total {
+    color: #0D83DE;
+    font-size: 250%;
+}
 #logo {
     padding-top: 0px;
     margin-top: -20px;
